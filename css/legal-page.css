@@ -1,12 +1,27 @@
-/* Legal Header - Pinned to top beneath header */
+/* Ensure body allows proper sticking */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Exercise Header - Make it sticky at top */
+.exercise-header {
+  position: sticky;
+  top: 0;
+  z-index: 200; /* Higher than legal header */
+  background-color: white; /* Add background so content doesn't show through */
+}
+
+/* Legal Header - Fixed to stay visible */
 .legal-header {
   background-color: #e2e2e2;
   padding: 30px;
   width: 100%;
-  position: sticky;
-  top: 0; /* Stick to top of viewport */
+  position: fixed; /* Changed from sticky to fixed */
+  top: 60px; /* Position beneath the exercise header */
+  left: 0;
   z-index: 100;
-  margin-top: 0; /* Remove margin that might interfere */
+  margin-top: 0;
 }
 
 .legal-header h1 {
@@ -18,7 +33,7 @@
 /* Main content with padding to prevent obscuring */
 main {
   padding-bottom: 70px; /* Space for fixed footer */
-  padding-top: 0; /* Legal header handles top spacing */
+  padding-top: 150px; /* Space for both fixed headers (60px + 90px) */
 }
 
 /* Section with adjusted positioning */
@@ -40,7 +55,7 @@ section {
   height: max-content;
   padding: 10px 16px;
   position: sticky;
-  top: 90px; /* Positioned beneath the sticky legal header (30px padding × 2 + h1 height) */
+  top: 150px; /* Positioned beneath both sticky headers (60px exercise + 90px legal) */
   z-index: 50;
 }
 
