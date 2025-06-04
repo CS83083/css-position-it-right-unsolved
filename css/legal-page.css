@@ -1,24 +1,24 @@
-/* Ensure body allows proper sticking */
+
 body {
   margin: 0;
   padding: 0;
 }
 
-/* Exercise Header - Make it sticky at top */
+
 .exercise-header {
   position: sticky;
   top: 0;
-  z-index: 200; /* Higher than legal header */
-  background-color: white; /* Add background so content doesn't show through */
+  z-index: 200; 
+  background-color: white; 
 }
 
-/* Legal Header - Fixed to stay visible */
+
 .legal-header {
   background-color: #e2e2e2;
   padding: 30px;
   width: 100%;
-  position: fixed; /* Changed from sticky to fixed */
-  top: 60px; /* Position beneath the exercise header */
+  position: fixed; 
+  top: 60px; 
   left: 0;
   z-index: 100;
   margin-top: 0;
@@ -30,13 +30,13 @@ body {
   margin: 0 auto;
 }
 
-/* Main content with padding to prevent obscuring */
+
 main {
-  padding-bottom: 70px; /* Space for fixed footer */
-  padding-top: 150px; /* Space for both fixed headers (60px + 90px) */
+  padding-bottom: 70px; 
+  padding-top: 150px; 
 }
 
-/* Section with adjusted positioning */
+
 section {
   display: flex;
   gap: 30px;
@@ -48,18 +48,18 @@ section {
   color: white;
 }
 
-/* Section Label - Sticky within its parent section */
+
 .section-label {
   width: 100%;
   background-color: #2b2d3b;
   height: max-content;
   padding: 10px 16px;
   position: sticky;
-  top: 150px; /* Positioned beneath both sticky headers (60px exercise + 90px legal) */
+  top: 150px; 
   z-index: 50;
 }
 
-/* Document content unchanged */
+
 .document-content {
   display: flex;
   flex-direction: column;
@@ -80,7 +80,7 @@ section {
   line-height: 28px;
 }
 
-/* Footer - Fixed to bottom of viewport */
+
 footer {
   display: flex;
   align-items: center;
