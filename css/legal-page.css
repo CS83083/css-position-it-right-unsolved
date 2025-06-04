@@ -1,8 +1,12 @@
+/* Legal Header - Pinned to top beneath header */
 .legal-header {
   background-color: #e2e2e2;
   padding: 30px;
-  margin-top: 60px;
   width: 100%;
+  position: sticky;
+  top: 0; /* Stick to top of viewport */
+  z-index: 100;
+  margin-top: 0; /* Remove margin that might interfere */
 }
 
 .legal-header h1 {
@@ -11,9 +15,13 @@
   margin: 0 auto;
 }
 
+/* Main content with padding to prevent obscuring */
 main {
+  padding-bottom: 70px; /* Space for fixed footer */
+  padding-top: 0; /* Legal header handles top spacing */
 }
 
+/* Section with adjusted positioning */
 section {
   display: flex;
   gap: 30px;
@@ -25,13 +33,18 @@ section {
   color: white;
 }
 
+/* Section Label - Sticky within its parent section */
 .section-label {
   width: 100%;
   background-color: #2b2d3b;
   height: max-content;
   padding: 10px 16px;
+  position: sticky;
+  top: 90px; /* Positioned beneath the sticky legal header (30px padding × 2 + h1 height) */
+  z-index: 50;
 }
 
+/* Document content unchanged */
 .document-content {
   display: flex;
   flex-direction: column;
@@ -52,6 +65,7 @@ section {
   line-height: 28px;
 }
 
+/* Footer - Fixed to bottom of viewport */
 footer {
   display: flex;
   align-items: center;
@@ -59,6 +73,10 @@ footer {
   background-color: #e2e2e2;
   padding: 0 30px;
   min-height: 70px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
 }
 
 .footer-content {
