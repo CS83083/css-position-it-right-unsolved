@@ -1,6 +1,5 @@
-/* Robot Face Animations */
 
-/* 1. ROTATION ANIMATION - Hair spinning */
+
 @keyframes spin-hair {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
@@ -10,7 +9,6 @@
     animation: spin-hair 2s linear infinite;
 }
 
-/* 2. DISAPPEARING/APPEARING ANIMATION - Eyes blinking */
 @keyframes blink-eyes {
     0%, 90% { opacity: 1; }
     95% { opacity: 0; }
@@ -22,7 +20,6 @@
     animation: blink-eyes 3s ease-in-out infinite;
 }
 
-/* 3. CHANGING DIMENSIONS ANIMATION - Nose breathing */
 @keyframes breathe-nose {
     0%, 100% { 
         transform: translateX(-50%) scale(1); 
@@ -36,7 +33,6 @@
     animation: breathe-nose 2.5s ease-in-out infinite;
 }
 
-/* 4. MOVEMENT AROUND POSITION - Ears bobbing */
 @keyframes bob-ears {
     0%, 100% { transform: translateY(0px); }
     50% { transform: translateY(-10px); }
@@ -47,7 +43,6 @@
     animation: bob-ears 1.8s ease-in-out infinite;
 }
 
-/* 5. HOVER ANIMATION - Teeth chattering on face hover */
 @keyframes chatter-teeth {
     0%, 100% { transform: translateY(0px); }
     25% { transform: translateY(-3px); }
@@ -58,7 +53,6 @@
     animation: chatter-teeth 0.3s ease-in-out infinite;
 }
 
-/* 6. COLOR CHANGING ANIMATION - Hair color cycling */
 @keyframes color-cycle {
     0% { background-color: #e74c3c; }
     25% { background-color: #f39c12; }
@@ -71,9 +65,7 @@
     animation: color-cycle 4s ease-in-out infinite;
 }
 
-/* Additional creative animations for remaining elements */
 
-/* Hair center piece pulsing */
 @keyframes pulse-center-hair {
     0%, 100% { 
         transform: scale(1);
@@ -89,7 +81,6 @@
     animation: pulse-center-hair 2.8s ease-in-out infinite;
 }
 
-/* Accent dot (pseudo-element) floating */
 @keyframes float-accent {
     0%, 100% { transform: translate(-50%, 0px); }
     50% { transform: translate(-50%, -8px); }
@@ -99,7 +90,6 @@
     animation: float-accent 2.2s ease-in-out infinite;
 }
 
-/* Enhanced hover effects */
 .robot-container:hover .robot-eye-left {
     background-color: #ff6b6b;
     transition: background-color 0.3s ease;
@@ -111,14 +101,12 @@
     transition: transform 0.3s ease;
 }
 
-/* Mouth/teeth container hover effect */
 .robot-teeth:hover {
     background-color: #34495e;
     transform: scale(1.05);
     transition: all 0.3s ease;
 }
 
-/* Sequential delay for teeth animation to create wave effect */
 .robot-face-shape:hover .robot-tooth:nth-child(1) { animation-delay: 0s; }
 .robot-face-shape:hover .robot-tooth:nth-child(2) { animation-delay: 0.05s; }
 .robot-face-shape:hover .robot-tooth:nth-child(3) { animation-delay: 0.1s; }
